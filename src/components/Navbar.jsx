@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -7,12 +8,12 @@ const Navbar = () => {
           Gig<span className="text-indigo-300">Hunt</span>
         </span>
         <span className="flex-1"></span>
-        <a href="#" className="font-semibold text-indigo-300 transition-colors hover:text-white">Home</a>
-        <a href="#" className="text-indigo-100 transition-colors hover:text-white">Pricing</a>
-        <a href="#" className="text-indigo-100 transition-colors hover:text-white">About</a>
-        <button className="rounded-lg border border-indigo-600 bg-indigo-900 px-5 py-2 font-semibold text-white transition-colors hover:border-indigo-400 hover:bg-indigo-800">
+        <Link to="/" className="font-semibold text-indigo-300 transition-colors hover:text-white">Home</Link>
+        <Link to="/pricing" className="text-indigo-100 transition-colors hover:text-white">Pricing</Link>
+        <Link to="/about" className="text-indigo-100 transition-colors hover:text-white">About</Link>
+        <Link to="/login" className="rounded-lg border border-indigo-600 bg-indigo-900 px-5 py-2 font-semibold text-white transition-colors hover:border-indigo-400 hover:bg-indigo-800">
           Log in
-        </button>
+        </Link>
       </nav>
   )
 }

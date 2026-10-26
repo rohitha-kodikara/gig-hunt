@@ -1,6 +1,16 @@
 import Navbar from "./Navbar"
+import { fakeUserCredetials } from "../jobs"
+import { useState } from "react"
 
 const Login = () => {
+ const[username, setUsername] = useState("")
+ const[password, setPassword] = useState("")
+
+ function handleLogin(e) {
+    e.preventDefault()
+    console.log("Logging in with:", username, password)
+ }
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
      
@@ -15,12 +25,14 @@ const Login = () => {
             </p>
           </div>
 
-          <form className="space-y-5">
+          <form onSubmit={handleLogin} className="space-y-5">
             <div>
               <label htmlFor="username" className="mb-2 block text-sm font-semibold text-indigo-100">
                 Username
               </label>
               <input
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 id="username"
                 name="username"
                 type="text"
@@ -41,6 +53,8 @@ const Login = () => {
                 </a>
               </div>
               <input
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 id="password"
                 name="password"
                 type="password"

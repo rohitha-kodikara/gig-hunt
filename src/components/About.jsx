@@ -3,7 +3,7 @@ import Navbar from "./Navbar"
 const About = () => {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
-     
+     <Navbar />
 
       <main className="flex min-h-[calc(100vh-81px)] items-center justify-center bg-gradient-to-br from-indigo-950 via-slate-950 to-violet-950 px-6 py-16">
       <section className="w-full max-w-3xl text-center">

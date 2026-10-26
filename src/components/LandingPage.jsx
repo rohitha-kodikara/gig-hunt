@@ -3,8 +3,8 @@ import Navbar from "./Navbar"
 const LandingPage = () => {
   return (
    <div className="min-h-screen bg-slate-950 text-slate-100">
-     
-
+      <Navbar />
+ 
       <main className="min-h-[calc(100vh-81px)] bg-gradient-to-br from-indigo-950 via-slate-950 to-violet-950 px-6 py-28 text-center sm:py-36">
         <h1 className="mx-auto max-w-3xl text-5xl font-bold tracking-tight text-white sm:text-6xl">
           Find your next <span className="text-indigo-300">gig</span>

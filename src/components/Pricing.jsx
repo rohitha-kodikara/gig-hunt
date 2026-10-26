@@ -3,7 +3,7 @@ import Navbar from "./Navbar"
 const Pricing = () => {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
-    
+        <Navbar />
 
       <main className="bg-gradient-to-br from-indigo-950 via-slate-950 to-violet-950 px-6 py-16 sm:px-10 lg:px-16">
         <section className="mx-auto max-w-6xl">

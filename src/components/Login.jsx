@@ -1,14 +1,20 @@
 import Navbar from "./Navbar"
 import { fakeUserCredetials } from "../jobs"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 const Login = () => {
  const[username, setUsername] = useState("")
  const[password, setPassword] = useState("")
+ const navigate = useNavigate()
 
  function handleLogin(e) {
     e.preventDefault()
-    console.log("Logging in with:", username, password)
+    if (fakeUserCredetials.some(user => user.username === username && user.password === password)) {
+      navigate("/app")
+    }else {
+      alert("Invalid username or password.")
+    }
  }
 
   return (
@@ -67,7 +73,7 @@ const Login = () => {
 
             <button
               type="submit"
-              className="w-full rounded-lg bg-indigo-500 px-5 py-3.5 text-base font-semibold text-white shadow-lg shadow-indigo-950/40 transition hover:bg-indigo-400 focus:outline-none focus:ring-4 focus:ring-indigo-300/40"
+              className="cursor-pointer w-full rounded-lg bg-indigo-500 px-5 py-3.5 text-base font-semibold text-white shadow-lg shadow-indigo-950/40 transition hover:bg-indigo-400 focus:outline-none focus:ring-4 focus:ring-indigo-300/40"
             >
               Log in
             </button>

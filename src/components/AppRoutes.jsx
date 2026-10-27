@@ -19,6 +19,7 @@ const AppRoutes = () => {
             <Route index element={<Dashboard />} />
             <Route  path="jobs" element={<JobList />} >
                 <Route path=":jobId" element={<JobDetails />} />
+           
             </Route>
           </Route>
             <Route path="pricing" element={<Pricing />}/>
